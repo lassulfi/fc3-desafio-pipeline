@@ -6,10 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "test": "node --test test/",
-    "test:watch": "node --watch --test test/",
-    "test:cov-native": "node --experimental-test-coverage --test test/",
-    "test:cov": "npx c8 --exclude index.js --exclude test/ --reporter html --reporter text node --test test/"
+    "test": "LOG_DISABLED=true NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest",
+    "test:cov": "LOG_DISABLED=true NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest --coverage"
   },
   "keywords": [],
   "author": "lassulfi",
@@ -17,7 +15,7 @@
   "engines": {
     "node": "v20.5.1"
   },
-  "dependencies": {
-    "c8": "^8.0.1"
+  "devDependencies": {
+    "jest": "^29.6.2"
   }
 }

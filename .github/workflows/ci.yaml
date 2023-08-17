@@ -27,7 +27,7 @@ jobs:
               run: npm run test:cov
         
             - name: Sonarcloud scan
-              run: SonarSource/sonarcloud-github-action@v1
+              run: sonarsource/sonarcloud-github-action@master
               env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
