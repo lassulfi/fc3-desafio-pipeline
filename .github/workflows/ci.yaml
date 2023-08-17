@@ -20,7 +20,7 @@ jobs:
             - name: Run tests
               run: npm test
             - name: Run test coverage
-              run: npm test:cov
+              run: npm run test:cov
             - name: Sonarcloud scan
               run: sonarsource/sonarcloud-github-action@master
               env:
