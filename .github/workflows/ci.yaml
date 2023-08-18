@@ -22,10 +22,7 @@ jobs:
             - name: Install dependencies
               run: npm ci
             
-            - name: Run tests
-              run: npm test
-            
-            - name: Run test coverage
+            - name: Test and coverage
               run: npm run test:cov
         
             - name: Sonarcloud scan
