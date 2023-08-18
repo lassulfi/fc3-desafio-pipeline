@@ -1,5 +1,5 @@
 import { describe, it, expect } from "@jest/globals"
-import { add, divide, multiply, subtract } from "./calculator.js"
+import { add, divide, multiply, subtract } from "../src/calculator.js"
 
 describe("Calculator unit tests", () => {
     describe("add tests", () => {
