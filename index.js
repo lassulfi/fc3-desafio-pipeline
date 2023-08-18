@@ -1,1 +1,1 @@
-console.log("started calculator!")
+console.log("started calculator")

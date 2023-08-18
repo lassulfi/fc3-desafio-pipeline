@@ -1,6 +1,5 @@
-import { describe, it } from "node:test"
-import { add, divide, multiply, subtract } from "../calculator.js"
-import assert from "node:assert"
+import { describe, it, expect } from "@jest/globals"
+import { add, divide, multiply, subtract } from "../src/calculator.js"
 
 describe("Calculator unit tests", () => {
     describe("add tests", () => {
@@ -11,7 +10,7 @@ describe("Calculator unit tests", () => {
             const result = add(1, 2);
             
             const expectedResult = 3;
-            assert.strictEqual(result, expectedResult, `Add result should be ${expectedResult}, actual: ${result}`)
+            expect(result).toStrictEqual(expectedResult)
         })
     })
 
@@ -23,7 +22,7 @@ describe("Calculator unit tests", () => {
             const result = subtract(1, 2);
 
             const expectedResult = -1;
-            assert.strictEqual(result, expectedResult, `Subtract result should be ${expectedResult}, actual: ${result}`)
+            expect(result).toStrictEqual(expectedResult)
         })
     })
 
@@ -35,7 +34,7 @@ describe("Calculator unit tests", () => {
             const result = multiply(a, b);
 
             const expectedResult = 2;
-            assert.strictEqual(result, expectedResult, `Multiply result should be ${expectedResult}, actual: ${result}`)
+            expect(result).toStrictEqual(expectedResult)
         })
     })
 
@@ -44,7 +43,7 @@ describe("Calculator unit tests", () => {
             const a = 1;
             const b = 0;
 
-            assert.throws(() => divide(a, b), "should throw 'Cannot divide by zero' error")
+            expect(() => divide(a, b)).toThrow("Cannot divide by zero");
         });
         it("should divide by a non-zero number", () => {
             const a = 10;
@@ -53,7 +52,7 @@ describe("Calculator unit tests", () => {
             const result = divide(a, b);
 
             const expectedResult = 5;
-            assert.strictEqual(result, expectedResult, `divide result should be ${expectedResult}, actual: ${result}`)
+            expect(result).toStrictEqual(expectedResult)
         })
     })
 })
