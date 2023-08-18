@@ -2,7 +2,7 @@
   "name": "desafio-pipeline",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "calculator.js",
   "type": "module",
   "scripts": {
     "start": "node index.js",
